@@ -1,0 +1,19 @@
+.list{
+  overflow-y: auto;
+  height: 700px;
+  flex: 1;
+  list-style: none;
+  cursor: pointer;
+}
+.list > li {
+  padding: 10px 0;
+}
+.container{
+  align-items: flex-start;
+  display: flex;
+}
+.videoWrapper{
+  width: 1280px;
+  height: 720px;
+  position: relative;
+}

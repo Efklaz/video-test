@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import cl from './App.module.css';
+import React, {useRef} from "react";
+import {List} from "./components/List";
+import {Video} from "./components/Video";
+import {RectAngels} from "./components/RectAngels";
 function App() {
+    const counter = useRef<number>(0);
+    const video  = useRef<HTMLVideoElement>(null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className={cl.container}>
+        <div className={cl.videoWrapper}>
+          <Video video={video}/>
+          <RectAngels />
+        </div>
+        <List video={video} counter={counter}/>
+      </div>
   );
 }
-
 export default App;
