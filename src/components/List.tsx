@@ -15,7 +15,7 @@ function UnList({video, counter,}: Props) {
     useEffect(() => {
         // @ts-ignore
         dispatch(fetchData());
-    }, [mocData]);
+    }, []);
     useEffect( () => {
         let handler = () => {
             const currentTime =  video.current?.currentTime;
